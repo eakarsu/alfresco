@@ -1,0 +1,47 @@
+{
+  "name": "@alfresco/workflow-service",
+  "version": "1.0.0",
+  "description": "Workflow and Business Process Management Service",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "camunda-external-task-client-js": "^2.3.1",
+    "bpmn-js": "^11.5.0",
+    "bpmn-moddle": "^8.1.0",
+    "dmn-js": "^14.3.0",
+    "form-js": "^1.6.0",
+    "zeebe-node": "^8.3.1",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.2",
+    "bull": "^4.11.5",
+    "node-cron": "^3.0.3",
+    "ioredis": "^5.3.2",
+    "amqplib": "^0.10.3",
+    "socket.io": "^4.6.0",
+    "joi": "^17.11.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0",
+    "handlebars": "^4.7.8",
+    "nodemailer": "^6.9.7",
+    "jsonpath": "^1.1.1",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/lodash": "^4.14.202",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0",
+    "jest": "^29.7.0"
+  }
+}

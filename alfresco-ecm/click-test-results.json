@@ -1,0 +1,510 @@
+{
+  "timestamp": "2025-09-11T00:14:55.126Z",
+  "summary": {
+    "totalClicked": 8,
+    "totalNavigated": 40,
+    "totalFound": 12,
+    "totalErrors": 8,
+    "totalInteractions": 48
+  },
+  "byPage": {
+    "Homepage": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 0,
+      "errors": 1
+    },
+    "Repository": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 6,
+      "errors": 1
+    },
+    "Workflow": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 4,
+      "errors": 1
+    },
+    "Workflow Builder": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 0,
+      "errors": 1
+    },
+    "Sites": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 0,
+      "errors": 1
+    },
+    "Records": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 2,
+      "errors": 1
+    },
+    "Search": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 0,
+      "errors": 1
+    },
+    "Admin": {
+      "clicked": 1,
+      "navigated": 5,
+      "found": 0,
+      "errors": 1
+    }
+  },
+  "details": [
+    {
+      "page": "Homepage",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Homepage",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Homepage",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Homepage",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Homepage",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Homepage",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Homepage",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Repository",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Repository",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Repository",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Repository",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Repository",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Repository",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Repository",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Repository",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Repository",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Repository",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Repository",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Repository",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Repository",
+      "element": "Select with 5 options",
+      "status": "found",
+      "type": "select"
+    },
+    {
+      "page": "Workflow",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Workflow",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Workflow",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Workflow",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Workflow",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Workflow",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Workflow",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Workflow",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Workflow",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Workflow",
+      "element": "checkbox input",
+      "status": "found",
+      "type": "input"
+    },
+    {
+      "page": "Workflow",
+      "element": "Select with 4 options",
+      "status": "found",
+      "type": "select"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Workflow Builder",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Sites",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Sites",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Sites",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Sites",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Sites",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Sites",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Sites",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Records",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Records",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Records",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Records",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Records",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Records",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Records",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Records",
+      "element": "Select with 4 options",
+      "status": "found",
+      "type": "select"
+    },
+    {
+      "page": "Records",
+      "element": "Select with 4 options",
+      "status": "found",
+      "type": "select"
+    },
+    {
+      "page": "Search",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Search",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Search",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Search",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Search",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Search",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Search",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    },
+    {
+      "page": "Admin",
+      "element": "🔍 Quick Search",
+      "status": "clicked",
+      "type": "button"
+    },
+    {
+      "page": "Admin",
+      "element": "🔍 Quick Search",
+      "status": "error",
+      "error": "Execution context was destroyed, most likely because of a navigation."
+    },
+    {
+      "page": "Admin",
+      "element": "🗂️ Alfresco ECM",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Admin",
+      "element": "🏠Dashboard",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/"
+    },
+    {
+      "page": "Admin",
+      "element": "📁Repository",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/repository"
+    },
+    {
+      "page": "Admin",
+      "element": "⚙️Workflow",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow"
+    },
+    {
+      "page": "Admin",
+      "element": "🔧Workflow Builder",
+      "status": "navigated",
+      "type": "link",
+      "href": "http://localhost:3000/workflow/builder"
+    }
+  ]
+}

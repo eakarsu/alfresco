@@ -1,0 +1,178 @@
+services:
+  # PostgreSQL for structured data
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: alfresco_ecm
+      POSTGRES_USER: alfresco
+      POSTGRES_PASSWORD: alfresco_secure_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts/postgres:/docker-entrypoint-initdb.d
+    networks:
+      - alfresco-network
+
+  # MongoDB for document storage
+  mongodb:
+    image: mongo:7.0
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: alfresco
+      MONGO_INITDB_ROOT_PASSWORD: alfresco_secure_pass
+      MONGO_INITDB_DATABASE: alfresco_content
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./init-scripts/mongo:/docker-entrypoint-initdb.d
+    networks:
+      - alfresco-network
+
+  # Elasticsearch for search
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - alfresco-network
+
+  # Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - alfresco-network
+
+  # MinIO for S3-compatible object storage
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: alfresco
+      MINIO_ROOT_PASSWORD: alfresco_secure_pass
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+    networks:
+      - alfresco-network
+
+  # Keycloak for authentication
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: alfresco
+      KC_DB_PASSWORD: alfresco_secure_pass
+    command: start-dev
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - alfresco-network
+
+  # RabbitMQ for message queuing
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: alfresco
+      RABBITMQ_DEFAULT_PASS: alfresco_secure_pass
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - alfresco-network
+
+  # Camunda for workflow engine
+  camunda:
+    image: camunda/camunda-bpm-platform:7.20.0
+    ports:
+      - "8090:8080"
+    environment:
+      DB_DRIVER: org.postgresql.Driver
+      DB_URL: jdbc:postgresql://postgres:5432/camunda
+      DB_USERNAME: alfresco
+      DB_PASSWORD: alfresco_secure_pass
+      WAIT_FOR: postgres:5432
+    depends_on:
+      - postgres
+    networks:
+      - alfresco-network
+
+  # Apache Tika for content extraction
+  tika:
+    image: apache/tika:latest
+    ports:
+      - "9998:9998"
+    networks:
+      - alfresco-network
+
+  # LibreOffice for document conversion
+  libreoffice:
+    image: gotenberg/gotenberg:7
+    ports:
+      - "3050:3000"
+    networks:
+      - alfresco-network
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - alfresco-network
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./config/grafana:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+      - alfresco-network
+
+volumes:
+  postgres_data:
+  mongodb_data:
+  elasticsearch_data:
+  redis_data:
+  minio_data:
+  rabbitmq_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  alfresco-network:
+    driver: bridge

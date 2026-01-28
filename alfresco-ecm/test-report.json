@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "passRate": "100.00%"
+  },
+  "passed": [
+    "Homepage loads with correct title",
+    "Navigation item present: Dashboard",
+    "Navigation item present: Repository",
+    "Navigation item present: Workflow",
+    "Navigation item present: Sites",
+    "Navigation item present: Records",
+    "Button clickable: Open Repository",
+    "Button clickable: Workflow Console",
+    "Button clickable: Open Sites",
+    "Button clickable: Records Console",
+    "Navigation works: Repository",
+    "Navigation works: Workflow",
+    "Navigation works: Sites",
+    "Navigation works: Records",
+    "Repository buttons present",
+    "Document list present",
+    "Workflow page has interactive elements",
+    "Sites page loads",
+    "Records page loads",
+    "Search button present",
+    "Responsive on Desktop",
+    "Responsive on Tablet",
+    "Responsive on Mobile",
+    "No critical console errors",
+    "Good performance"
+  ],
+  "failed": [],
+  "timestamp": "2025-09-10T23:58:59.066Z"
+}

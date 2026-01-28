@@ -1,0 +1,53 @@
+{
+  "name": "@alfresco/document-service",
+  "version": "1.0.0",
+  "description": "Document Management Service with Full Alfresco Features",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "@aws-sdk/client-s3": "^3.474.0",
+    "mongoose": "^8.0.3",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.2",
+    "ioredis": "^5.3.2",
+    "bull": "^4.11.5",
+    "sharp": "^0.33.1",
+    "pdf-lib": "^1.17.1",
+    "mammoth": "^1.6.0",
+    "xlsx": "^0.18.5",
+    "archiver": "^6.0.1",
+    "unzipper": "^0.10.14",
+    "mime-types": "^2.1.35",
+    "file-type": "^18.7.0",
+    "clamav.js": "^0.12.0",
+    "crypto": "^1.0.1",
+    "uuid": "^9.0.1",
+    "diff": "^5.1.0",
+    "semver": "^7.5.4",
+    "winston": "^3.11.0",
+    "joi": "^17.11.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.3",
+    "socket.io": "^4.6.0",
+    "amqplib": "^0.10.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.11",
+    "@types/node": "^20.10.0",
+    "@types/lodash": "^4.14.202",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0",
+    "jest": "^29.7.0"
+  }
+}
