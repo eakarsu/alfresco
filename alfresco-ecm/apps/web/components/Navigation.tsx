@@ -1,10 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const router = useRouter();
+  const [loggingOut, setLoggingOut] = useState(false);
+
+  const handleLogout = async () => {
+    setLoggingOut(true);
+    try {
+      await fetch('/api/auth/logout', { method: 'POST' }).catch(() => {});
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      sessionStorage.clear();
+      router.push('/');
+    } finally {
+      setLoggingOut(false);
+    }
+  };
   
   const navItems = [
     { href: '/', label: 'Dashboard', icon: '🏠', testId: 'nav-dashboard' },
@@ -98,7 +114,7 @@ export default function Navigation() {
           
           <button
             data-testid="profile-button"
-            onClick={() => alert('Opening user profile...')}
+            onClick={() => router.push('/profile')}
             style={{
               padding: '0.5rem 1rem',
               backgroundColor: 'transparent',
@@ -110,19 +126,22 @@ export default function Navigation() {
           >
             👤 Profile
           </button>
-          
+
           <button
             data-testid="logout-button"
+            onClick={handleLogout}
+            disabled={loggingOut}
             style={{
               padding: '0.5rem 1rem',
               backgroundColor: '#FF5630',
               color: 'white',
               border: 'none',
               borderRadius: '4px',
-              cursor: 'pointer'
+              cursor: loggingOut ? 'not-allowed' : 'pointer',
+              opacity: loggingOut ? 0.7 : 1
             }}
           >
-            Logout
+            {loggingOut ? 'Logging out...' : 'Logout'}
           </button>
         </div>
       </div>

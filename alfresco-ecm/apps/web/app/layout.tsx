@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Navigation from '../components/Navigation';
+import { ToastProviderWrapper } from './ToastProviderWrapper';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0, padding: 0, fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-        <Navigation />
-        <main>{children}</main>
+        <ToastProviderWrapper>
+          <Navigation />
+          <main>{children}</main>
+        </ToastProviderWrapper>
       </body>
     </html>
   );
