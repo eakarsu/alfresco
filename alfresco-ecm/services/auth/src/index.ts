@@ -9,6 +9,7 @@ import { roleRouter } from './routes/role.routes';
 import { permissionRouter } from './routes/permission.routes';
 import { sessionRouter } from './routes/session.routes';
 import { auditRouter } from './routes/audit.routes';
+import { customFeaturesRouter } from './routes/customFeatures.routes';
 import { configurePassport } from './config/passport';
 import { errorHandler } from './middleware/error.middleware';
 import { rateLimiter } from './middleware/rate-limit.middleware';
@@ -50,6 +51,7 @@ async function startServer() {
     app.use('/api/v1/permissions', permissionRouter);
     app.use('/api/v1/sessions', sessionRouter);
     app.use('/api/v1/audit', auditRouter);
+    app.use('/api/v1/custom', customFeaturesRouter);
     
     // Health check
     app.get('/health', (req, res) => {
