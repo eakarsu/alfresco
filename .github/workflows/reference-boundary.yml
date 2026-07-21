@@ -1,0 +1,25 @@
+name: reference-boundary
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-reference-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/verify-reference-boundary.cjs
+      - run: node --test tests/reference-boundary.test.cjs
+      - run: |
+          bash -n alfresco-ecm/start.sh
+          bash -n alfresco-ecm/start-local.sh
+          bash -n alfresco-ecm/stop.sh
+          bash -n alfresco-ecm/stop-local.sh
+      - name: Inventory frozen dependency findings (not a release gate)
+        continue-on-error: true
+        run: npm audit --package-lock-only --omit=dev --audit-level=high
+        working-directory: alfresco-ecm

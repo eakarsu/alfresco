@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "decision": "quarantined_reference_prototype",
+  "deployable_product": false,
+  "supported_entrypoint": null,
+  "snapshot": {
+    "repository_origin": "https://github.com/eakarsu/alfresco",
+    "commit_at_review": "ff20333",
+    "captured_on": "2026-07-19"
+  },
+  "provenance": {
+    "classification": "locally authored prototype inspired by Alfresco Community Edition; not a verified upstream fork or official Alfresco distribution",
+    "upstream_repository": null,
+    "upstream_version": null,
+    "verification_basis": [
+      "local Git remote and commit history",
+      "alfresco-ecm/README.md acknowledgement text",
+      "absence of a checked-in LICENSE, NOTICE, or COPYING file"
+    ]
+  },
+  "governance": {
+    "owner": null,
+    "release_target": null,
+    "license": "UNRESOLVED",
+    "security_patch_owner": null,
+    "support_sla": null,
+    "update_strategy": "frozen until an owner, license decision, and extraction plan are approved"
+  },
+  "restrictions": [
+    "Do not deploy, publish, sell, or represent this snapshot as Alfresco software.",
+    "Do not rely on legacy feature, certification, compliance, performance, uptime, or support claims.",
+    "Do not run bundled launch, stop, seed, reset, Docker, or Kubernetes automation on shared systems.",
+    "Do not copy code into a product until provenance, third-party licenses, trademarks, dependencies, and credentials are reviewed."
+  ],
+  "activation_requirements": [
+    "Assign a named accountable owner and security-patching owner.",
+    "Resolve repository and third-party licensing and trademark use in writing.",
+    "Select a supported journey and extract it into a separate product boundary.",
+    "Define identity, data, provider, configuration, migration, backup, and release contracts.",
+    "Replace demo credentials and destructive automation and pass risk-based acceptance tests."
+  ]
+}

@@ -1,4 +1,12 @@
-# Alfresco ECM Platform - Complete Implementation
+# QUARANTINED REFERENCE PROTOTYPE
+
+> **Not a supported application or official Alfresco distribution.** There is no assigned product/security owner, verified upstream fork/version, checked-in license text, supported entry point, release target, certification, or SLA. Do not deploy this snapshot or rely on any claim below. See [`../REFERENCE_BOUNDARY.md`](../REFERENCE_BOUNDARY.md) and [`../PRODUCT_EXTRACTION_CHECKLIST.md`](../PRODUCT_EXTRACTION_CHECKLIST.md).
+
+## UNVERIFIED LEGACY MATERIAL
+
+Everything below this heading is preserved only to show the prototype's historical intent. Feature checkmarks, default credentials, license statements, integrations, compliance/certification claims, performance numbers, uptime, security properties, and support contacts have not been substantiated and must not be represented as facts.
+
+# Alfresco ECM Platform - Legacy aspirational description
 
 A comprehensive Enterprise Content Management platform implementing ALL Alfresco features using modern cloud-native architecture.
 

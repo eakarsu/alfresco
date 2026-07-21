@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "REFERENCE SNAPSHOT: execution is disabled; see ../REFERENCE_BOUNDARY.md" >&2
+exit 78
+
 # Stop all locally running services
 
 echo "🛑 Stopping Alfresco ECM Platform (Local Services)..."

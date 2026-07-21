@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "REFERENCE SNAPSHOT: execution is disabled; see ../REFERENCE_BOUNDARY.md" >&2
+exit 78
+
 # Alfresco ECM Platform - Local Development Startup Script
 # Runs services locally while using Docker for infrastructure
 
